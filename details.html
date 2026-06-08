@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Details — Patrick &amp; Wen Cheen ROM</title>
+  <meta name="description" content="Details for the Registry of Marriage ceremony of Patrick and Wen Cheen — 19th September 2026 at Thean Hou Temple, Kuala Lumpur.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="sparkles" id="sparkles" aria-hidden="true"></div>
+
+  <main class="page">
+    <div class="card" id="details-card">
+
+      <!-- Header -->
+      <div class="card__section">
+        <p class="ornament" aria-hidden="true">✦ ✦ ✦</p>
+        <h1 class="card__title script-heading">Patrick <span style="font-family:var(--font-display);font-weight:300;font-style:italic;font-size:0.5em;color:var(--color-rose)">&amp;</span> Wen Cheen</h1>
+        <p class="card__subtitle body-text">Registry of Marriage Ceremony</p>
+      </div>
+
+      <!-- Date & Time -->
+      <div class="card__section">
+        <p class="card__label">When</p>
+        <p class="card__value">Saturday, 19th September 2026</p>
+        <p class="card__value" style="margin-top:0.3rem">12:00 PM</p>
+        <p class="card__note">⏰ Please arrive by <strong style="color:var(--color-gold-light)">10:30 AM</strong> for seating</p>
+      </div>
+
+      <!-- Venue -->
+      <div class="card__section">
+        <p class="card__label">Where</p>
+        <p class="card__value">Thean Hou Temple</p>
+        <p class="card__note">65, Persiaran Endah, Taman Persiaran Desa,<br>50460 Kuala Lumpur</p>
+
+        <div class="map-links">
+          <a href="https://maps.google.com/?q=Thean+Hou+Temple+Kuala+Lumpur" target="_blank" rel="noopener noreferrer" class="map-link" id="google-maps-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Google Maps
+          </a>
+          <a href="https://waze.com/ul?q=Thean%20Hou%20Temple%20Kuala%20Lumpur&navigate=yes" target="_blank" rel="noopener noreferrer" class="map-link" id="waze-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C8.13 2 5 5.13 5 9c0 1.74.5 3.37 1.41 4.84.95 1.54 2.2 2.86 3.16 4.4.47.75.81 1.45 1.17 2.26.13.29.24.58.26.76h1.93c.02-.18.13-.47.26-.76.36-.81.7-1.51 1.17-2.26.96-1.54 2.21-2.86 3.16-4.4C18.5 12.37 19 10.74 19 9c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+            Waze
+          </a>
+        </div>
+      </div>
+
+      <!-- RSVP -->
+      <div class="card__section rsvp">
+        <div class="divider" aria-hidden="true">
+          <span class="divider__line"></span>
+          <span>❦</span>
+          <span class="divider__line"></span>
+        </div>
+        <p class="rsvp__question">Will you be joining us?</p>
+        <div class="rsvp__buttons">
+          <a href="yes.html" class="btn btn--primary" id="rsvp-yes-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+            Yes, I'll be there!
+          </a>
+          <a href="no.html" class="btn btn--secondary" id="rsvp-no-btn">
+            Sorry, I can't
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <script>
+    // Sparkle particles
+    (function () {
+      const container = document.getElementById('sparkles');
+      const count = 18;
+      for (let i = 0; i < count; i++) {
+        const s = document.createElement('div');
+        s.classList.add('sparkle');
+        s.style.left = Math.random() * 100 + '%';
+        s.style.bottom = '-5%';
+        s.style.animationDuration = (4 + Math.random() * 6) + 's';
+        s.style.animationDelay = (Math.random() * 8) + 's';
+        s.style.width = s.style.height = (2 + Math.random() * 3) + 'px';
+        container.appendChild(s);
+      }
+    })();
+
+    // Card entrance animation
+    const card = document.getElementById('details-card');
+    card.style.opacity = '0';
+    card.style.transform = 'translateY(24px)';
+    card.style.transition = 'opacity 0.7s ease, transform 0.7s ease';
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        card.style.opacity = '1';
+        card.style.transform = 'translateY(0)';
+      });
+    });
+  </script>
+
+</body>
+</html>

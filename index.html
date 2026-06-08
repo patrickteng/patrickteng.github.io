@@ -1,1 +1,76 @@
-<iframe style="width:100%;min-height:100vh;height:100%" src="https://demo.mobi-reward.com/" frameborder="0" noresize="noresize" data-view="fullScreenPreview"></iframe>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Patrick &amp; Wen Cheen — ROM Invitation</title>
+  <meta name="description" content="You are cordially invited to the Registry of Marriage ceremony of Patrick and Wen Cheen on 19th September 2026.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Sparkle particles -->
+  <div class="sparkles" id="sparkles" aria-hidden="true"></div>
+
+  <main class="page">
+    <section class="hero" id="hero-section">
+
+      <p class="hero__pretitle">You are cordially invited to</p>
+
+      <div class="hero__image-wrapper">
+        <img src="assets/hero_image.png" alt="Patrick and Wen Cheen" width="280" height="280">
+      </div>
+
+      <p class="ornament" aria-hidden="true">✦ ✦ ✦</p>
+
+      <h1 class="hero__names script-heading">
+        Patrick
+        <span class="hero__ampersand">&amp;</span>
+        Wen Cheen
+      </h1>
+
+      <p class="hero__subtitle">Registry of Marriage Ceremony</p>
+
+      <div class="divider" aria-hidden="true">
+        <span class="divider__line"></span>
+        <span>❦</span>
+        <span class="divider__line"></span>
+      </div>
+
+      <p class="hero__date">19 · September · 2026</p>
+
+      <a href="details.html" class="btn btn--primary btn--lg" id="view-details-btn">
+        View Details
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </a>
+
+    </section>
+  </main>
+
+  <!-- Bottom scroll hint -->
+  <a href="details.html" class="scroll-cta" id="scroll-cta" aria-label="View event details">
+    <span>Details</span>
+    <svg class="scroll-cta__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+  </a>
+
+  <script>
+    // Generate sparkle particles
+    (function () {
+      const container = document.getElementById('sparkles');
+      const count = 25;
+
+      for (let i = 0; i < count; i++) {
+        const s = document.createElement('div');
+        s.classList.add('sparkle');
+        s.style.left = Math.random() * 100 + '%';
+        s.style.bottom = '-5%';
+        s.style.animationDuration = (4 + Math.random() * 6) + 's';
+        s.style.animationDelay = (Math.random() * 8) + 's';
+        s.style.width = s.style.height = (2 + Math.random() * 3) + 'px';
+        container.appendChild(s);
+      }
+    })();
+  </script>
+
+</body>
+</html>

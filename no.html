@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thank You — Patrick &amp; Wen Cheen ROM</title>
+  <meta name="description" content="Thank you for letting us know. We appreciate your time!">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="sparkles" id="sparkles" aria-hidden="true"></div>
+
+  <main class="page">
+    <div class="response-page no-page">
+
+      <div class="response-page__emoji">🤗</div>
+
+      <h1 class="response-page__heading display-heading" style="text-transform:none; letter-spacing:0.02em;">
+        That's Okay!
+      </h1>
+
+      <p class="response-page__subheading">
+        We completely understand
+      </p>
+
+      <div class="divider" aria-hidden="true" style="opacity:0; animation: fadeUp 0.6s 0.5s ease forwards;">
+        <span class="divider__line"></span>
+        <span>❦</span>
+        <span class="divider__line"></span>
+      </div>
+
+      <p class="response-page__body">
+        Thank you so much for taking the time to view our invitation.<br>
+        We truly appreciate your kind thoughts and well wishes. 💛<br><br>
+        We'll miss having you there, but we'll carry your<br>
+        love and blessings with us on our special day.
+      </p>
+
+      <div class="response-page__action">
+        <a href="index.html" class="btn btn--secondary btn--lg" id="back-home-btn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+          Back to Invitation
+        </a>
+      </div>
+
+    </div>
+  </main>
+
+  <script>
+    // Gentle floating hearts
+    (function () {
+      const container = document.getElementById('sparkles');
+      const hearts = ['💛', '🤍', '✨'];
+      const count = 12;
+      for (let i = 0; i < count; i++) {
+        const el = document.createElement('div');
+        el.classList.add('sparkle');
+        el.textContent = hearts[Math.floor(Math.random() * hearts.length)];
+        el.style.left = Math.random() * 100 + '%';
+        el.style.bottom = '-5%';
+        el.style.fontSize = (0.8 + Math.random() * 0.8) + 'rem';
+        el.style.width = 'auto';
+        el.style.height = 'auto';
+        el.style.background = 'none';
+        el.style.animationDuration = (5 + Math.random() * 7) + 's';
+        el.style.animationDelay = (Math.random() * 6) + 's';
+        container.appendChild(el);
+      }
+    })();
+  </script>
+
+</body>
+</html>
