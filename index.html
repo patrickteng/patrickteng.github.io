@@ -22,10 +22,19 @@
     <!-- Left: Hero Image -->
     <div class="invitation__hero">
       <img src="assets/hero_image.png" alt="Patrick and Wen Cheen" width="800" height="1000">
+      <!-- Mobile overlay (visible only on small screens) -->
+      <div class="hero-overlay" id="hero-overlay">
+        <p class="hero-overlay__simple">You are invited</p>
+        <p class="hero-overlay__date">19 · Sep · 2026</p>
+        <a href="#details" class="scroll-cta" id="scroll-cta" aria-label="Scroll to details">
+          <span>Details</span>
+          <svg class="scroll-cta__arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+        </a>
+      </div>
     </div>
 
     <!-- Right: Details -->
-    <section class="invitation__details">
+    <section class="invitation__details" id="details">
       <div class="details-card" id="details-card">
 
         <!-- Names -->
@@ -48,7 +57,7 @@
           <p class="info__label">When</p>
           <p class="info__value">Saturday, 19th September 2026</p>
           <p class="info__value">12:00 PM</p>
-          <p class="info__note">⏰ Please arrive by <strong>10:30 AM</strong> for seating</p>
+          <p class="info__note">⏰ Please arrive by <strong>11:30 AM</strong> for seating</p>
         </div>
 
         <!-- Venue -->
@@ -112,8 +121,8 @@
     //  with the couple's WhatsApp number (with country
     //  code, no + or spaces), e.g. 60123456789
     // =============================================
-    const WHATSAPP_NUMBER = ''; // e.g. '60123456789'
-    const WHATSAPP_MESSAGE = encodeURIComponent("Yes I'm planning to attend your ROM!!");
+    const WHATSAPP_NUMBER = '601126605919';
+    const WHATSAPP_MESSAGE = "Yes I'll be there!!\n\nLooking forward to celebrating with you both!";
 
     const whatsappUrl = WHATSAPP_NUMBER
       ? 'https://wa.me/' + WHATSAPP_NUMBER + '?text=' + WHATSAPP_MESSAGE
