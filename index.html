@@ -116,26 +116,22 @@
   </div>
 
   <script>
-    // =============================================
-    //  IMPORTANT: Replace YOUR_PHONE_NUMBER below
-    //  with the couple's WhatsApp number (with country
-    //  code, no + or spaces), e.g. 60123456789
-    // =============================================
-    const WHATSAPP_NUMBER = '601126605919';
-    const WHATSAPP_MESSAGE = "Yes I'll be there!!\n\nLooking forward to celebrating with you both!";
-
-    const whatsappUrl = WHATSAPP_NUMBER
-      ? 'https://wa.me/' + WHATSAPP_NUMBER + '?text=' + WHATSAPP_MESSAGE
-      : 'https://wa.me/?text=' + WHATSAPP_MESSAGE;
+    const params = new URLSearchParams(window.location.search);
+    let whatsapp_no = '60173672613';
+    if (params.has("bride")) {
+      whatsapp_no = '601126605919';
+    }
+    const whatsapp_msg = "Yes I'll be there!!\n\nLooking forward to celebrating with you both!";
+    const whatsapp_url = 'https://wa.me/' + whatsapp_no + '?text=' + whatsapp_msg;
 
     // Yes → open WhatsApp
     document.getElementById('rsvp-yes-btn').addEventListener('click', function (e) {
       e.preventDefault();
-      window.open(whatsappUrl, '_blank');
+      window.open(whatsapp_url, '_blank');
     });
 
     // No → show toast
-    var overlay = document.getElementById('toast-overlay');
+    let overlay = document.getElementById('toast-overlay');
 
     document.getElementById('rsvp-no-btn').addEventListener('click', function () {
       overlay.classList.add('active');
